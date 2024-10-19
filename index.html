@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe Game</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body style="background-color: rgb(224, 251, 224)">
+    <div id="header" class="container text-center p-3">
+      <div class="row pt-2">
+        <div class="col">
+          <h1 class="m-3">Tic-Tac-Toe</h1>
+        </div>
+      </div>
+
+      <!--dispaying contestants; where contestant 1 is "X", and contestand 2 is "O"-->
+      <div class="row pt-2">
+        <div id="cont1" class="col fs-2">Contestant 1 - X</div>
+        <div class="col fs-2"></div>
+        <div id="cont2" class="col fs-2">Contestant 2 - O</div>
+      </div>
+    </div>
+
+     <!--creating alerts that will appear when we have a winner, a draw or for the start of game--> 
+     <div id="alert-container">
+        <div
+          id="alertBegin"
+          class="alert alert-success text-center m-1 ms-5 me-5 fs-3"
+          role="alert"
+          style="display:none; position:fixed; top:0; width:100%"
+        >
+         Contestant 1 Play!
+        </div>
+  
+        <div
+          id="alertWinner"
+          class="alert alert-success text-center m-1 ms-5 me-5 fs-3"
+          role="alert"
+          style="display:none; position:fixed; top:0; width:100%"
+        ></div>
+  
+        <div
+          id="alertDraw"
+          class="alert alert-success text-center m-1 ms-5 me-5 fs-3"
+          role="alert"
+          style="display:none; position:fixed; top:0; width:100%"
+        >
+          NO WINNER!😐 It's a DRAW!
+        </div>
+      </div>
+
+    <!--making a grid of 9 cells-->
+    <div class="container m-auto p-3 g-5">
+      <div
+        id="grid"
+        class="container-outline-light m-auto p-0 text-center align-middle"
+        style="background-color: #006400; border: 2px solid #022e02"
+      >
+        <div class="row fs-1 g-0">
+          <div
+            id="box0"
+            class="box col p-3"
+            style="border: 1.5px solid #022e02"
+          ></div>
+          <div
+            id="box1"
+            class="box col p-3"
+            style="border: 1.5px solid #022e02"
+          ></div>
+          <div
+            id="box2"
+            class="box col p-3"
+            style="border: 1.5px solid #022e02"
+          ></div>
+        </div>
+        <div class="row fs-1 g-0">
+          <div
+            id="box3"
+            class="box col p-3"
+            style="border: 1.5px solid #022e02"
+          ></div>
+          <div
+            id="box4"
+            class="box col p-3"
+            style="border: 1.5px solid #022e02"
+          ></div>
+          <div
+            id="box5"
+            class="box col p-3"
+            style="border: 1.5px solid #022e02"
+          ></div>
+        </div>
+        <div class="row fs-1 g-0">
+          <div
+            id="box6"
+            class="box col p-3"
+            style="border: 1.5px solid #022e02"
+          ></div>
+          <div
+            id="box7"
+            class="box col p-3"
+            style="border: 1.5px solid #022e02"
+          ></div>
+          <div
+            id="box8"
+            class="box col p-3"
+            style="border: 1.5px solid #022e02"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--creating buttons-->
+
+    <div class="d-grid col-3 gap-2 mx-auto pt-5">
+        <button id="beginBtn" type="button" class="btn btn-outline-success fs-5">
+          BEGIN
+        </button>
+        <button id="restartBtn" type="button" class="btn btn-outline-secondary fs-5">
+          RESTART
+        </button>
+
+   
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>  
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </script>
+    <script src="tic-tac-toe.js"></script>
+  </body>
+</html>

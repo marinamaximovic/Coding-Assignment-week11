@@ -1,0 +1,12 @@
+body {
+  color: darkgreen;
+}
+
+#grid {
+  max-width: 350px;
+}
+
+.box {
+  min-height: 100px;
+  color: white;
+}
